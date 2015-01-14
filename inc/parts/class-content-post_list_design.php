@@ -22,6 +22,10 @@ if ( ! class_exists( 'TC_post_list_design' ) ) :
 
         function tc_alter_main_query() {
           global $wp_query;
+          //only apply to home or blog posts page
+          if ( ! $wp_query->is_posts_page || ! is_home() )
+            return;
+
           $_query_vars    = $wp_query->query_vars;
           $page           =  ( ! isset($_query_vars['paged']) || ! $_query_vars['paged'] ) ? 0 : $_query_vars['paged'];
 
@@ -83,15 +87,6 @@ if ( ! class_exists( 'TC_post_list_design' ) ) :
               }
             }
           }
-
-
-          /*?>
-            <pre>
-              <?php print_r($wp_query); ?>
-            </pre>
-          <?php*/
-          ?>
-          <?php
         }
 
         function tc_post_list_design(){
