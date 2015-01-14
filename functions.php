@@ -51,29 +51,12 @@ require_once( get_template_directory() . '/inc/init.php' );
 * More informations on how to create a child theme with Customizr here : http://themesandco.com/customizr/#child-theme
 */
 
-/* SPECIAL TREATMENT FOR IMAGE IN DOC */
-add_filter( 'the_content' , 'tc_add_dummy_image' );
 
-function tc_add_dummy_image( $content ) {
-  if ( ! isset( $_GET['lazy_load'] ) || 'true' != $_GET['lazy_load'] )
-    return $content;
+/*__return_false to disable it*/
+add_filter( 'tc_post_list_design', '__return_true');
 
-  if( is_feed() || is_preview() || wp_is_mobile() ) return $content;
-  if (strpos( $content, 'data-src' ) !== false) return $content;
-    $content = preg_replace_callback('#<img([^>]+?)src=[\'"]?([^\'"\s>]+)[\'"]?([^>]*)>#', 'tc_replace_callback', $content);
+add_filter('tc_post_list_design_cols', function(){
+    return 4;
+});
 
-  return $content;
-}
-
-function tc_replace_callback($matches) {
-  if ( ! isset( $_GET['lazy_load'] ) || 'true' != $_GET['lazy_load'] )
-    return $content;
-
-  $dummy_image = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
-
-  if (preg_match('/ data-lazy *= *"false" */', $matches[0])){
-      return '<img' . $matches[1] . 'src="' . $matches[2] . '"' . $matches[3] . '>';
-  } else {
-      return '<img' . $matches[1] . 'src="' . $dummy_image . '" data-src="' . $matches[2] . '"' . $matches[3] . '><noscript><img' . $matches[1] . 'src="' . $matches[2] . '"' . $matches[3] . '></noscript>';
-  }
-}
+add_filter('tc_post_list_expand_featured', '__return_true');
