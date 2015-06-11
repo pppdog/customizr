@@ -292,7 +292,7 @@ msgstr ""
 #: ../class-fire-init.php:480
 #, fuzzy
 msgid "Main Menu"
-msgstr "主菜單"
+msgstr "主選單"
 
 #: ../class-fire-init.php:904
 msgid "Help"
@@ -525,7 +525,7 @@ msgstr "滑鼠劃躍至上方以打開子功能表"
 
 #: ../class-fire-utils_settings_map.php:404
 msgid "Choose a predefined skin"
-msgstr "選擇一款預設皮膚"
+msgstr "選擇一款預設膚色"
 
 #: ../class-fire-utils_settings_map.php:414
 #: ../class-fire-utils_settings_map.php:2148
@@ -584,7 +584,7 @@ msgstr "上傳圖示（支援：.ico, .png, .gif 檔案格式）"
 
 #: ../class-fire-utils_settings_map.php:468
 msgid "FAVICON"
-msgstr ""
+msgstr "網站小圖示"
 
 #: ../class-fire-utils_settings_map.php:486
 msgid "Choose content and layout"
@@ -673,7 +673,7 @@ msgstr ""
 #: ../class-fire-utils_settings_map.php:597
 #, fuzzy
 msgid "Read more &raquo;"
-msgstr "閱讀更多"
+msgstr "閱讀更多 &raquo;"
 
 #: ../class-fire-utils_settings_map.php:599
 msgid "Button text"
@@ -882,7 +882,7 @@ msgstr ""
 #: ../class-fire-utils_settings_map.php:873
 #: ../class-fire-utils_settings_map.php:2138
 msgid "child theme."
-msgstr ""
+msgstr "兒童主題"
 
 #: ../class-fire-utils_settings_map.php:874
 #: ../class-fire-utils_settings_map.php:2139
@@ -960,7 +960,7 @@ msgstr "您可以在外觀區域的功能表編輯頁面編輯您的功能表內
 
 #: ../class-fire-utils_settings_map.php:1094
 msgid "Post lists : blog, archives, ..."
-msgstr "文章列表：博客，歸檔等。"
+msgstr "文章列表：部落格，歸檔等等。"
 
 #: ../class-fire-utils_settings_map.php:1096
 #, fuzzy
